@@ -117,14 +117,14 @@ export default class Contact extends React.Component {
   			<form onSubmit={this.handleSubmit} className="row">
   				<div className="col-12 col-md-6">
 					  <div className="input">
-					    <label for="name" >Your name</label>
-					    <input type="text" for="name" className="form-control" value={this.state.names} onChange={this.handleChange.bind(this, 'names')} />
+					    <label htmlFor="name" >Your name</label>
+					    <input name="name" type="text" htmlFor="name" className="form-control" value={this.state.names} onChange={this.handleChange.bind(this, 'names')} />
 					    {(this.state.namesValid && !this.state.namesFirst) || (this.state.namesValid  === false && !this.state.namesFirst === false )  ?
                    <br /> : <p className="error">  Please enter your names  </p> }
                
 					  </div>
 					  <div className="input">
-					    <label for="email" >Your Email</label>
+					    <label htmlFor="email" >Your Email</label>
 					    <input name="email" type="email"  className="form-control" onChange={this.handleChange.bind(this, 'email')} />
 					    {(this.state.emailValid  && !this.state.emailFirst) || (this.state.emailValid  === false && !this.state.emailFirst === false) ?
                    <br /> : <p className="error"> Please enter your email in this format: yourname@example.com </p>}
@@ -134,7 +134,7 @@ export default class Contact extends React.Component {
 
   				<div className="col-12 col-md-6">
   					<div className="input">
-					    <label for="message">About your business and your needs </label>
+					    <label htmlFor="message">About your business and your needs </label>
 					    <textarea name="message" className="form-control"  onChange={this.handleChange.bind(this, 'message')}></textarea>
 					    {(this.state.messageValid && !this.state.messageFirst) || (this.state.messageValid  === false && !this.state.messageFirst === false) ?
                  <br /> : <p className="error"> Please let me know about you! that's how I can help you :)  </p> }

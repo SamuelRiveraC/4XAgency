@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
-export default class Portfolio extends React.Component {
+export default class Posts extends React.Component {
   render () { return (
     <div className="row portfolio" >
-        
-        {this.props.portfolios.map((item,index) => {
+
+        {this.props.postEdges.map((item,index) => {
         return <div key={index} className="col-12 col-md-6">
   
-          <Link key={index} className="portfolio__item" to={`/portfolio/${item.node.fields.slug}/`}>
+          <Link key={index} className="portfolio__item" to={`/${item.node.fields.category}/${item.node.fields.slug}/`}>
             <div className="portfolio__preview">
               <div className="portfolio__img__container">
-                <Img fluid={item.node.frontmatter.thumbnail.childImageSharp.fluid} />
+                {/*<Img fluid={item.node.frontmatter.thumbnail.childImageSharp.fluid} />*/}
               </div>
             </div>
             <div className="portfolio__link">

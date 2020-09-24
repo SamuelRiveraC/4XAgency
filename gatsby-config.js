@@ -1,4 +1,4 @@
-module.exports = {
+ module.exports = {
   siteMetadata: {
     title: `Samuel Rivera C`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -13,6 +13,25 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-categories",
+      options: {
+        templatePath: `${__dirname}/src/templates/category.js`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-tags",
+      options: {
+        templatePath: `${__dirname}/src/templates/tag.js`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog/`,
+        name: 'blog',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/portfolio/`,
@@ -26,6 +45,7 @@ module.exports = {
         name: `images`,
       },
     },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

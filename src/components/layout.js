@@ -33,7 +33,6 @@ export default class Layout extends React.Component {
         <div className="row">
           <div className="nav__open" onClick={() => this.setState({navbar:!this.state.navbar})}>
             <FontAwesomeIcon icon={faBars} size="2x" /> 
-            
           </div>
   
           <nav className={!this.state.navbar && "open"} style={{width: this.state.navbar ? "100vw" : "0vw"}}>
@@ -62,9 +61,19 @@ export default class Layout extends React.Component {
             </a>
           </nav>
 
+
+
+
+
           <main className="col-12" >
               {this.props.children}
           </main>
+
+
+
+
+
+
 
           <footer className="col-12">
             <div className="row justify-content-center">

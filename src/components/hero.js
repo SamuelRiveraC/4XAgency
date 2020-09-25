@@ -5,24 +5,14 @@ import CV from "../components/cv"
 
 export default class Hero extends React.Component {
 
-	render () {
-    	return (
+	render () { return (
 		<div className="hero row" >
       
       <div className="hero__overlay"> </div>
 
-      <StaticQuery
-         query={graphql`
-          query {
-            file(relativePath: { eq: "hero.png" }) {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid 
-                } 
-              }
-            }
-          }
-        `}
+      <StaticQuery query={ graphql` query { file(relativePath: { eq: "hero.png" }) {
+        childImageSharp { fluid(maxWidth: 1000) { ...GatsbyImageSharpFluid 
+        } } } } `}
         render={data => (
           <Img className="hero__background" fluid={data.file.childImageSharp.fluid} />
         )}
@@ -55,13 +45,8 @@ export default class Hero extends React.Component {
         </div>
       </div>
 
-  	  
-
-
-  	  <div className="hero__arrow"></div>
   	</div>
-		);
-  	}
+	); }
 }
 
 

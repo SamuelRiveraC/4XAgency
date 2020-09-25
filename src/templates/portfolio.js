@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import WorkWithMe from "../components/workwithme"
 
 const PortfolioPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -100,8 +99,6 @@ const PortfolioPostTemplate = ({ data, pageContext, location }) => {
       </div> }
       
       <div className="separator" />
-
-      <WorkWithMe />
 
     </Layout>
   )

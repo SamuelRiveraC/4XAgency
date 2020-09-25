@@ -8,7 +8,6 @@ import { Carousel } from 'react-responsive-carousel';
 export default class Testimonials extends React.Component {
   render () { return (
     <div className="testimonials row justify-content-center" >
-      <h3 className="section_title">   Testimonials   </h3>
       
       <Carousel className="col-12 col-md-8 testimonial__carousel">
 

@@ -21,7 +21,7 @@ const PortfolioPage = ({data}) => (
     </Fade>
 
     <div className="separator" />
-
+    
   </Layout>
 )
 export default PortfolioPage
